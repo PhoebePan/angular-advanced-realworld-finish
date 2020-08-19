@@ -10,7 +10,7 @@ export class CreateComponent implements OnInit {
 
   post = this.formBuilder.group({
     title: this.formBuilder.control('', Validators.required),
-    description: this.formBuilder.control(''),
+    description: this.formBuilder.control('', [Validators.required, Validators.minLength(10)]),
     body: this.formBuilder.control(''),
     tags: this.formBuilder.array([
       this.formBuilder.control('Angular'),
