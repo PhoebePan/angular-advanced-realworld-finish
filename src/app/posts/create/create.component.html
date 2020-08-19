@@ -59,7 +59,11 @@
             </div>
           </fieldset>
 
-          <button type="submit" class="btn btn-lg btn-primary pull-xs-right">
+          <button
+            type="submit"
+            class="btn btn-lg btn-primary pull-xs-right"
+            [disabled]="post.invalid"
+          >
             Create Post
           </button>
         </form>
