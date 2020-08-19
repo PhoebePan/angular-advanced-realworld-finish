@@ -12,9 +12,16 @@
               type="text"
               placeholder="Email"
               [(ngModel)]="user.email"
+              required
+              email
               #tEmail="ngModel"
             />
           </fieldset>
+          <ul *ngIf="tEmail.invalid">
+            <li *ngIf="tEmail.errors.required">請輸入 Email 地址</li>
+            <li *ngIf="tEmail.errors.email">Email 格式不正確</li>
+          </ul>
+
           <fieldset class="form-group">
             <input
               name="password"
