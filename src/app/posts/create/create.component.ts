@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -18,6 +18,10 @@ export class CreateComponent implements OnInit {
       this.formBuilder.control('CSS'),
     ]),
   });
+
+  get tags(): FormArray {
+    return this.post.get('tags') as FormArray;
+  }
 
   constructor(private formBuilder: FormBuilder) { }
 
