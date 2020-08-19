@@ -12,6 +12,7 @@
               type="text"
               placeholder="Email"
               [(ngModel)]="user.email"
+              #tEmail="ngModel"
             />
           </fieldset>
           <fieldset class="form-group">
@@ -21,6 +22,7 @@
               type="password"
               placeholder="Password"
               [(ngModel)]="user.password"
+              #tPassword="ngModel"
             />
           </fieldset>
           <button class="btn btn-lg btn-primary pull-xs-right">
