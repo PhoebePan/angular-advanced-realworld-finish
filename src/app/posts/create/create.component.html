@@ -11,6 +11,9 @@
               formControlName="title"
             />
           </fieldset>
+          <ul *ngIf="title.dirty && title.invalid">
+            <li *ngIf="title.errors.required">請輸入標題</li>
+          </ul>
           <fieldset class="form-group">
             <textarea
               class="form-control"
