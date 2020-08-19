@@ -29,9 +29,19 @@
               type="password"
               placeholder="Password"
               [(ngModel)]="user.password"
+              required
+              minlength="4"
               #tPassword="ngModel"
             />
           </fieldset>
+          <ul *ngIf="tPassword.invalid">
+            <li *ngIf="tPassword.errors.required">請輸入密碼</li>
+            <li *ngIf="tPassword.errors.minlength">
+              密碼長度必須大於
+              {{ tPassword.errors.minlength.requiredLength }} 個字元
+            </li>
+          </ul>
+
           <button class="btn btn-lg btn-primary pull-xs-right">
             Sign in
           </button>
