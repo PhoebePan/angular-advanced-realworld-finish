@@ -29,16 +29,14 @@
           </fieldset>
           <fieldset class="form-group">
             <input class="form-control" type="text" placeholder="Enter tags" />
-            <div class="tag-list">
-              <span class="label label-pill label-default">
-                <i class="ion-close-round"></i> programming</span
+            <div class="tag-list" formArrayName="tags">
+              <span
+                class="label label-pill label-default"
+                *ngFor="let tag of tags.controls"
               >
-              <span class="label label-pill label-default">
-                <i class="ion-close-round"></i> javascript</span
-              >
-              <span class="label label-pill label-default">
-                <i class="ion-close-round"></i> webdev</span
-              >
+                <i class="ion-close-round"></i>
+                {{ tag.value }}
+              </span>
             </div>
           </fieldset>
           <button type="submit" class="btn btn-lg btn-primary pull-xs-right">
