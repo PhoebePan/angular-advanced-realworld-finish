@@ -42,7 +42,10 @@
             </li>
           </ul>
 
-          <button class="btn btn-lg btn-primary pull-xs-right">
+          <button
+            class="btn btn-lg btn-primary pull-xs-right"
+            [disabled]="tForm.invalid"
+          >
             Sign in
           </button>
         </form>
