@@ -36,4 +36,7 @@ export class CreateComponent implements OnInit {
     this.tags.removeAt(index);
   }
 
+  createPost(): void {
+    console.log(this.post.value);
+  }
 }
