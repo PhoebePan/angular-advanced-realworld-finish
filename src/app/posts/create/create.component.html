@@ -34,6 +34,7 @@
               placeholder="Enter tags"
               #tag
               (keyup.enter)="addTag(tag.value); tag.value = ''"
+              (keydown.enter)="$event.preventDefault()"
             />
             <div class="tag-list" formArrayName="tags">
               <span
