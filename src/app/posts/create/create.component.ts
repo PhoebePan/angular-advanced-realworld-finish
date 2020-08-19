@@ -28,4 +28,12 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addTag(tag: string): void {
+    this.tags.push(this.formBuilder.control(tag));
+  }
+
+  removeTag(index: number): void {
+    this.tags.removeAt(index);
+  }
+
 }
