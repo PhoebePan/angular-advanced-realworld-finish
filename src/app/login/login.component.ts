@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       )
       .subscribe((result) => {
         localStorage.setItem('token', result.user.token);
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl(this.redirectUrl ?? '/');
       });
   }
 }
